@@ -1,29 +1,24 @@
-﻿#include <iostream>
+#include <iostream>
 
 int main() {
-
     int n;
     std::cout << "Enter an integer: ";
     std::cin >> n;
 
-
     const int maxDigits = 10;
     int digits[maxDigits];
     int numDigits = 0;
-
 
     bool isNegative = (n < 0);
     if (isNegative) {
         n = -n;
     }
 
-
     do {
         digits[numDigits] = n % 10;
         n /= 10;
         ++numDigits;
     } while (n > 0);
-
 
     std::cout << "Digits in the array: ";
     if (isNegative) {
@@ -44,7 +39,6 @@ int main() {
             }
         }
     }
-
 
     std::cout << "Sorted digits in the array: ";
     if (isNegative) {
